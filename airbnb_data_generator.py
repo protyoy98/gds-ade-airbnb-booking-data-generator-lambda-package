@@ -43,13 +43,13 @@ def generate_bookings():
 
 
 def generate_booking_id():                  #generates random booking id
-    return f"B_{uuid.uuid4().fields[-1]}"
+    return f"B_{uuid.uuid4().fields[-1]//100000}"
 
 def generate_user_id():                     #generates random user id
-    return f"U_{uuid.uuid4().fields[-1]}"
+    return f"U_{uuid.uuid4().fields[-1]//100000}"
 
 def generate_property_id():                 #generates random property id
-    return f"P_{uuid.uuid4().fields[-1]}"
+    return f"P_{uuid.uuid4().fields[-1]//100000}"
 
 def generate_location():                    #generates random city, country
     return fake.city() + ", " + fake.country()
