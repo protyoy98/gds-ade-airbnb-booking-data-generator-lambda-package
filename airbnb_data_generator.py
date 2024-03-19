@@ -14,7 +14,7 @@ QUEUE_URL = 'https://sqs.us-east-1.amazonaws.com/339712975909/gds-ade-airbnb-boo
 # main handler funtion
 def lambda_handler(event, context):
     i=0
-    while(i<5):
+    while(i<200):
         booking = generate_bookings()
         print(booking)
         sqs_client.send_message(
